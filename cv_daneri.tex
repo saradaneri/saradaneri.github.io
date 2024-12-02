@@ -1,0 +1,768 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %% 
+%% LaTeX to get the ``??'' replaced with the number of the last page  %% 
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+\usepackage{palatino, multicol}
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc, amsfonts, graphicx, textpos}
+%\usepackage{euscript}
+%\usepackage[extra]{tipa}
+\usepackage[latin1]{inputenc}
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=0.7in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+\usepackage{paralist}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section 
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactitem}[#1]}{\end{compactitem}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+\begin{document}
+%\begin{textblock}{3}(9,0.8)
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=2.6cm]{photo}}
+%%\includegraphics[width=2cm]{photo}
+%\end{textblock}
+\begin{center}
+	CURRICULUM VITAE of SARA DANERI
+\end{center}
+
+\section{Address}
+%
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table 
+%       (adjust it to your liking; default is 1.85in).
+%
+%\newlength{\rcollength}\setlength{\rcollength}{1.85in}%
+\newlength{\rcollength}\setlength{\rcollength}{2.9in}%
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+Gran Sasso Science Institute\\ 
+Viale Francesco Crispi 7\\
+67100 L'Aquila\\
+Italy\\\\%&\textit{E-mail:} alberto.vezzani@unimi.it\\
+%20133, Milan  \\                       %& \textit{Tel:} 0039 02 50316168 \\
+%Italy\\   %  & \\% - 0031 644331585\\
+\textit{E-mail:} sara.daneri at gssi.it                      & 
+\end{tabular}
+
+
+
+\section{Actual Position}
+
+\textbf{Associate Professor} at the \textbf{Gran Sasso Science Institute}, L'Aquila.\hfill\textbf{since 14 Dec 2021}\\
+
+
+
+\section{Previous Positions and Education}
+
+
+\textbf{Assistant Professor} at the \textbf{Gran Sasso Science Institute}, L'Aquila.\hfill\textbf{14 Dec 2018 to 13 Dec 2021}\\
+
+\textbf{Juniorprofessor} at the \textbf{Friedrich-Alexander Universit\"at},\newline
+ Erlangen-N\"urnberg.\hfill\textbf{Sep 2015-Dec 2018}\\
+
+\textbf{Postdoc} at the \textbf{University of Leipzig}, Leipzig. \hfill\textbf{Oct 2013 - Aug 2015}\\
+In the group of Prof. Laszlo Sz\'ekelyhidi\\
+
+\textbf{Postdoc} at the \textbf{University of Z\"urich}, Z\"urich.\hfill\textbf{Jan 2012 - Sept 2013}\\
+In the group of Prof. Camillo De Lellis\\
+
+\textbf{Postdoc} at the \textbf{University of Pavia}, Pavia\hfill\textbf{Jan 2011 - Dec 2011}\\
+In the group of Prof. Aldo Pratelli\\
+\blankline
+
+\textbf{Ph.D. in Analysis} at the \textbf{S.I.S.S.A./I.S.A.S.}, Trieste\hfill\textbf{Nov 2007 - Oct 2011}\\
+PhD Thesis: ``Dimensional reduction and approximation of measures and weakly differentiable
+homeomorphisms''\\
+Advisor: Prof. Stefano Bianchini\\
+
+
+\blankline
+
+\textbf{Master in Mathematics} at the \textbf{University of Pavia}, 
+Pavia\hfill \textbf{Oct 2005 - Jul 2007}\\
+Date: 17 Jul 2007\\
+Grade: 110/110 \emph{with distinction}\\
+Thesis: ``Displacement convexity for integral functionals on Riemannian manifolds''\\
+Advisor: Prof. Giuseppe Savar\'e\\
+\blankline 
+
+\textbf{Bachelor in Mathematics} at the \textbf{University of Pavia}, 
+Pavia\hfill \textbf{Oct 2002 - Sept 2005}\\
+Date: 22 Sept 2005\\
+Grade: 110/110 \emph{with distinction}\\
+Thesis: ``Topological dynamics in case of non-uniqueness'' \\
+Advisor: Prof. Giulio Schimperna
+\blankline 
+\newpage
+
+\section{Preprints}
+
+\textsl{1. A rigorous approach to pattern formation for isotropic isoperimetric problems with competing nonlocal interactions}
+preprint arXiv:2406.13773\\
+con E. Runa\\
+
+\textsl{2. Exact periodic stripes for a local/nonlocal minimization problem with volume constraint }
+preprint	arXiv:2106.08135 \\ 
+with E. Runa\\ 
+
+\section{Publications}
+\textsl{1. Deterministic particle approximation of aggregation diffusion equations with nonlinear mobility }\\
+Journal of Hyperbolic Differential Equations (2023) 20(3), pp. 707?744\\
+with E. Radici e E. Runa\\
+
+\textsl{2. Periodic striped configurations in the large volume limit }\\
+Annali della Scuola Normale Superiore di Pisa (2023)\\ $https://doi.org/10.2422/2036-2145.202111\_021$\\
+with E. Runa\\
+
+\textsl{3. On the sticky particle solutions to the multi-dimensional pressureless Euler equations}\\
+J. Diff. Eq. 368 (2023): 173-202.\\
+with S. Bianchini\\
+
+\textsl{1.  One-dimensionality of the minimizers for a diffuse interface generalized antiferromagnetic model in general dimension}\\
+J. Funct. Anal. 283.12 (2022): 109715.\\
+with A. Kerschbaum and E. Runa\\
+
+\textsl{2. Deterministic particle approximation of aggregation-diffusion equations on unbounded domains}\\
+Journal of Differential Equations 312(11):474-517 (2022)\\
+with E. Radici and E. Runa\\
+
+\textsl{3. One-dimensionality of the minimizers in the large volume limit for a diffuse interface attractive/repulsive model in general dimension}\\
+Calculus of Variations and Partial differential Equations 61:12 (2022)\\
+with E. Runa\\
+
+\textsl{4. 	Non-uniqueness for the Euler equations up to Onsager's critical exponent}\\
+Annals of PDE, 7 (2021) 1, 8\\
+with  E. Runa and  L. Szekelyhidi Jr \\
+
+
+\textsl{5. Pattern formation for a local/nonlocal interaction functional arising in colloidal systems}\\
+SIAM J. Math. Anal. (2020)\\
+with E. Runa\\
+
+\textsl{6. Numerical Solution of Monge-Kantorovich Equations via a dynamic formulation  }\\
+Journal of Scientific Computing (2020)
+with E. Facca, F. Cardin, M. Putti\\
+
+\textsl{7. On the symmetry breaking and structure of the minimizers for a family of local/nonlocal interaction functionals}\\
+Rendiconti del seminario matematico (2019).\\
+with E. Runa\\
+
+\textsl{8. Exact periodic stripes for  minimizers of a local/non-local interaction functional in general dimension}\\
+Arch. Rat. Mech. Anal. 231, 1, 519--589 (2019)\\
+with E. Runa.\\
+
+\textsl{9. Pattern formation for a family of models with local/nonlocal interaction}\\
+Proceedings in Applied Mathematics and Mechanics (2018).\\
+with E. Runa\\
+
+\textsl{10. On Sudakov's type decomposition of transference plans with norm costs}\\
+Memoirs of the American Mathematical Society, Volume 251, Number 1197 (2018)\\
+with S. Bianchini.\\
+
+\textsl{11. Non-uniqueness and h-principle for H\"older-continuous weak solutions of the Euler equations}\\
+Arch. Rat. Mech. Anal. May 2017, Volume 224, Issue 2, pp. 471--514 (2017)\\
+with L. Sz\'ekelyhidi.\\
+
+
+\textsl{12. A planar bi-Lipschitz extension theorem}\\
+Adv. Calc. Var. 8 n.3, 221-266 (2015)\\
+with A. Pratelli.\\
+
+\textsl{13. Cauchy problem for dissipative H\"older solutions to the incompressible Euler equations}\\
+Comm. Math. Phys. 329 n.2, 745-786 (2014).\\
+
+
+
+
+\textsl{14. Smooth approximation of bi-Lipschitz orientation-preserving homeomorphisms}\\
+Ann. Inst. H. Poincar\'e Anal. Non Lin\'eaire 31 n.3, 567-589 (2014)\\
+with A. Pratelli\\
+
+
+\textsl{15. Lecture notes on gradient flows and optimal transport}\\
+\emph{Optimal transportation} 100-144,
+London Math. Soc. Lecture Note Ser. 413 \\
+Cambridge Univ. Press, Cambridge (2014)\\
+with G. Savar\'e.\\
+
+\textsl{16. Variational models for the incompressible Euler equations}\\
+Libro AIMS: ``HCDTE Lecture Notes. Part II.: Nonlinear Hyperbolic PDEs, Dispersive and Transport Equations''\\
+AIMS Ser. Appl. Math. 7 (2012)\\
+with A. Figalli.\\
+
+
+
+\textsl{17. The disintegration of the Lebesgue measure on the faces of a convex function}\\
+J. Funct. Anal. 258, 3604-3661 (2010)\\
+with L. Caravenna.\\
+
+\textsl{18. Eulerian calculus for the displacement convexity in the Wasserstein distance}\\
+SIAM J. Math. Anal. 40, 3, 1104-1122 (2008)\\
+with G. Savar\'e.\\ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Invited talks} 
+\textbf{2024}\\
+\blankline
+
+Workshop: "PDE Days in Maremma" Sorano, 28-30 Oct 2024\\
+
+Workshop: "Calculus of Variations: A new generation" Bonn, 16-20 Sep 2024\\
+
+Plenary speaker at AMS-UMI joint meeting in Palermo, 23-26 Jul 2024\\ 
+
+Analysis Seminar at Institute for Advanced Study, Princeton, 24 May 2024\\
+
+Workshop``Aggregation-Diffusion Equations and Collective Behavior: Analysis, Numerics and Applications'' at CIRM, Marseille, 8-12 Apr 2024\\
+
+Workshop ``Calculus of Variations in Siena'', 31 Jan-2 Feb 2024\\
+
+\textbf{2023}\\
+\blankline
+
+Unfinished Business: Problems in Applied GMT, Many-particle Systems, Epidemiology, and Phase Transitions, Bingen am Rein, 24-28 Jul 2023\\
+
+Workshop in Geometric Measure Theory, Bressanone, 29 May-02 Jun 2023\\
+
+
+\textbf{2022}\\
+\blankline
+
+Online Seminar ``Geometric Analysis'' organized by Simon Blatt, Philipp Reiter, Armin Schikorra, Guofang Wang, 27 Sep 2022\\
+
+INDAM conference ``Anisotropic isoperimetric problems and related topics'', Rome 5-9 Sep 2022\\
+
+
+12th Meeting on Nonlinear evolution PDEs, fluid dynamics and transport equations, Univ. L'Aquila, 13-15 Jul 2022\\
+
+Conference ``Recent Developments in Incompressible Fluid Dynamics'', Institute for Adavances Study, Princeton, 4-8 Apr 2022\\
+
+Two contributed  talks at  SIAM Conference on Analysis of PDEs , 15 Mar 2022\\
+
+
+Conference ``Rigorous analysis of incompressible fluid models and turbulence'', Isaac Newton institute, Cambridge, 14 Feb 2022\\
+
+Conference ``Frontiers in the analysis of kinetic equations'', Isaac Newton Institute, Cambridge, 13 Jan 2022\\
+
+
+\textbf{2021}
+\blankline
+
+UC Louvain, 12 Nov 2021\\
+
+NC State University, 3 Nov 2021\\
+
+
+University of Oxford, 28 Oct 2021\\
+
+
+RISM Congress on ``PDEs and Continuum Mechanics'', Varese, 21-23 Jul 2021\\
+
+
+SISSA SIAM Chapter Colloquium, 5 Lug 2021\\
+
+8th ECM, Jun 2021\\
+
+\textbf{2020}\\
+\blankline 
+
+ICTS conference:``Turbulence: Problems at the Interface of Mathematics and Physics'', Bangalore (online) 7 Dec 2020\\
+
+Universit\`a di Roma Tor Vergata, 19 Nov 2020\\
+
+
+University of Nottingham, 8 Oct 2020\\
+
+
+Oberwolfach workshop:``Variational Methods for Evolution'' (online participant), 13-19 Sep 2020\\
+
+Workshop on Euler and Navier-Stokes Equations (online), Fields Institute, Toronto , 14-18 Sep 2020\\
+
+
+
+\textbf{2019}\\
+\blankline
+
+LIASFMA China-Italy conference on PDEs and their applications. Fudan University, Shanghai, 9-13 Dec 2019.\\
+
+\emph{The mathematics of the Onsager's conjecture}
+Course at Shanghai Jiao Tong University, 3-6 Dec 2019.\\
+
+Workshop Mathematics for Mechanics\\
+Institute of Information Theory and Automation, Prague, 29 Oct-01 Nov 2019.\\
+\blankline
+
+XXI Congresso UMI, Section on partial differential equations\\
+University of Pavia, Pavia 02-07 Sept 2019.\\
+\blankline 
+
+Contributed talk at International Congress on Industrial and applied Mathematics, Minisymposium on ``Recent developments in nonlocal geometric variational problems''\\
+University of Valencia, Valencia, 15-19 July 2019.\\
+\blankline
+
+
+Conference ``GMT and PDEs in Basel. A young researchers meeting''\\
+University of Basel, Basel, 08-10 July 2019.\\
+\blankline
+
+\emph{Mini-course  ``The mathematics of Onsager's conjecture''}\\
+Courses in PDEs/Fluid Mechanics\\
+University of Warwick, Coventry, 13-16 May 2019.\\
+\blankline
+
+Conference ``Applied Analysis. Contributions of young researchers''\\
+Polytechnic University of Turin, Turin, 8-9 Apr 2019.\\
+\blankline
+
+
+International School of Advanced Studies (SISSA), Trieste, 03 Apr 2019.\\
+\blankline 
+
+
+University of Regensburg, 01 Feb 2019.\\
+\blankline
+
+
+\textbf{2018}\\
+\blankline
+
+
+Meeting on Applied Mathematics and Calculus of Variations in Rome\\
+University La Sapienza, Rome, 3-6 Sept 2018.\\
+\blankline
+
+
+International Workshop on Hyperbolic and Kinetic Problems: Theory and Applications\\
+Academia Sinica, Taipei, Taiwan, 10-14 Jul 2018.\\
+\blankline
+
+
+Invited speaker at HYP 2018\\
+Penn State University, 25-29 Jun 2018.\\
+\blankline
+
+
+International Workshop on Differential Equations\\
+Central European University, Budapest, 4-6 Apr 2018.\\
+\blankline
+
+
+XXVIII Convegno Nazionale di Calcolo delle Variazioni\\
+CIRM Levico Terme (Italy), 15 Feb 2018.\\
+\blankline
+
+
+Brainstorming in Rome\\
+University La Sapienza, Rome, 22 Jan 2018.\\
+\blankline
+
+
+\textbf{2017}\\
+\blankline
+
+University of Augsburg, 23 Nov 2017. \\
+
+
+University of Basel, 6 Nov 2017. \\
+
+Mathematical Analysis of Incompressible Fluid Flows\\
+University of Sussex, Brighton, 21 Sept 2017.\\
+
+
+IperPV 2017\\
+University of Pavia, Pavia, 7 Sept 2017.\\
+
+
+
+PhD Course \emph{Dissipative Euler flows and Onsager's conjecture} (in English) at Gran Sasso Science Institute, L'Aquila, Italy, from 13/03/2017 to 24/03/2017.\\
+
+Ideal Fluids and Transport\\
+Banach Center, Warsaw, 11 Feb 2017.\\
+
+
+
+
+\textbf{2016}\\
+\blankline
+
+University of Warwick, 17 Nov 2016.\\
+
+University of Padova, 11 Oct 2016.\\
+
+Women and research in Mathematics: the contribution of SISSA\\
+SISSA, Trieste, 08 Sept 2016.\\
+
+
+
+
+Contributed talk at HYP 2016\\
+University of Aachen, 1 Aug 2016.\\
+
+
+Partial Differential Equations and their Applications\\
+STIAS, Stellenbosch, Southafrica, 10 Mar 2016.\\
+
+
+
+\textbf{2015}\\
+\blankline
+
+IperGSSI 2015\\
+GSSI, L'Aquila (Italy) 24 Oct 2015.\\
+
+Penn State University, State College 09 Apr 2015.\\
+
+
+
+\textbf{2014}\\
+\blankline
+
+University of Basel, 05 Nov 2014.\\
+
+Talk at Conference on Differential Equations and Dynamical Systems at People's Friendship University of Moscow, 24 Aug 2014.\\
+\blankline
+
+SIMAI workshop, Taormina 08 Jul 2014.\\
+\blankline
+
+\textbf{2013}\\
+\blankline
+
+University of Cambridge, 11 Nov 2013. \\
+
+Conference ``Two days on Hyperbolic PDEs, Geometric Measure Theory and Optimal Transportation''\\
+S.I.S.S.A. (Trieste), 28-29 Oct 2013.\\
+\blankline
+
+\emph{Dissipative H\"older solutions to the incompressible Euler equations}\\
+Analysis workshop\\
+D$\check{e}\check{c}$\'in, 25-27 Oct 2013.\\
+\blankline
+
+Universit\'a di Pisa (Pisa), 20 Feb 2013.\\
+
+
+
+\textbf{2012}\\
+\blankline
+
+ERC workshop ``Geometric inequalities in Calculus of Variations''.\\
+Centro Ennio De Giorgi (Pisa), 10 Jul 2012.\\
+\blankline
+
+Poster for SFB Transregio.\\
+University of Tubingen (Tubingen), 15-16 e 20-22 Jun 2012.\\
+
+University of Basel (Basel), 28 Mar 2012.\\
+\blankline
+
+
+
+\textbf{2011}\\
+\blankline
+
+Universit\'a degli Studi di Parma (Parma), 9 May 2011.\\
+
+``XXI Convegno di Calcolo delle Variazioni''.\\
+Levico Terme, 10 Feb 2011.\\
+\blankline
+
+ERC School ``Analysis in Metric Spaces und Geometric Measure Theory''.\\
+Centro Ennio De Giorgi (Pisa), 12 Jan 2011.\\
+\blankline
+
+\textbf{2010}\\
+\blankline 
+
+VIII meeting ``Hyperbolic Conservation Laws and Fluid dynamics: Recent results and
+research Perspectives''.\\
+SISSA (Trieste), 4 Sept 2010.\\
+
+IMATI-CNR (Pavia), 25 May 2010.\\
+
+
+\textbf{2009}\\
+\blankline 
+
+Summer school and workshop ``Optimal transportation and applications''\\
+Institut Fourier (Grenoble), Jul 2009.\\
+
+``First Winter School at IMDEA on PDE's and Inequalities''.\\
+IMDEA (Madrid), Jan 2009.\\
+\blankline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Organization of Conferences}
+Coordinator and organizer of the intentive trimester on ``Particles, Fluids and Patterns: Analytical and Computational Challenges'', which will take place at Gran Sasso Science Institute from 31st March to 4th July 2025.\\
+
+Organizer of a Minisymposium at 8th ECM, Jun 2021.\\
+
+Organizer of the Special Session ``Analysis of nonlinear Flows'' at the next AIMS Conference Series on
+Dynamical Systems and Differential Equations, taking place in Taipei (Taiwan) from 5 to 9 Jul 2018.\\
+
+
+
+
+\section{Supervision of Students}
+
+
+Phd Thesis, from Alicja Kerschbaum, ``Pattern formation for local/nonlocal interaction functionals'' (defended Feb 2022)\\
+
+PhD Thesis, from Michele Gorini, ``Non-uniqueness of Leray-Hopf solutions  to the fractional Navier Stokes equations'' (defended Sep 2023)\\
+
+
+\section{Teaching}
+PhD Course ``An Introduction to Geometric Measure Theory and its Applications'' GSSI Nov-Dic 2023.\\
+
+PhD Course``Energy driven pattern formation: emergence of one-dimensional periodic structures'' GSSI May 2023.\\
+
+Invited PhD Course ``Convex integration: from isometric embeddings to Euler and Navier Stokes equations'' University of Padova 3-13 May 2022.\\
+
+PhD Course ``Energy driven pattern formation: emergence of one-dimensional periodic structures'' GSSI Mar 2022.\\
+
+PhD Course  ``Incompressible fluids equations'' GSSI, Nov 2020.\\
+
+Invited PhD Course ``The mathematics of the Onsager's conjecture''
+ Shanghai Jiao Tong University, 3-6 Dec 2019.\\
+
+PhD Course ``Classical dynamics of incompressible fluids: the Euler and the Navier Stokes
+equations'' Nov 2019 at GSSI.\\
+
+Invited PhD Course ``The mathematics of Onsager's conjecture'' May 2019 at University of Warwick.\\
+
+Phd Course ``Convex integration and applications'', Apr-May 2019 at GSSI.\\ 
+
+Bachelor Course ``Partial Differential Equations I'', WS 2018/2019 at the FAU.\\ 
+
+Invited Phd Course at ``Fall School on Hyperbolic Conservation Laws and Mathematical Fluid Dynamics'', 01-05 Oct 2018.\\
+
+Bachelor Course ``Elements of linear Algebra II'', SS 2018  at the FAU in Erlangen.\\
+
+Master Course ``Functional Analysis and Operator Theory'' (in German), WS 2017/2018 at the FAU.\\
+
+Master Course ``Partial Differential Equations II'' (in German), SS 2017 at the FAU.\\
+
+Invited PhD Course ``Dissipative Euler flows and Onsager's conjecture'' (in English) at Gran Sasso Science Institute, L'Aquila, Italy, from 13/03/2017 to 24/03/2017.\\
+
+Master Course ``Functional Analysis II'', WS 2016/2017 at the FAU (in German).\\
+
+Bachelor Course ``Ordinary Differential Equations'', SS 2016 at the FAU (in German).\\
+
+Master Course ``Real Analysis'', WS 2015/16 at the FAU (in German).\\
+
+PhD Course ``The incompressible Euler equations: existence and (non-)uniqueness'', 2014 Course at Max Planck Institute for Mathematics in the Sciences, Leipzig (in English).\\
+
+Exercises for ``Introduction to PDEs'', course given by Dr. G. Koch at the University of Z\"urich, WS 2012/2013 (in English). \\
+
+
+Exercises  for ``Analysis II'', course given by  Prof. A. Torelli and Prof. P. Colli at the University of Pavia, WS 2005/2006 (in Italian). \\
+
+
+
+\section{Languages}
+Italian: Mother tongue \\
+\blankline
+English: fluent\\
+\blankline
+German: fluent\\
+\blankline 
+Albanian: fluent.
+
+
+
+
+
+
+
+\end{document}
