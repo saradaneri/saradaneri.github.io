@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Allow: /bibs/
-Sitemap: https://saradaneri.github.io/sitemap.xml

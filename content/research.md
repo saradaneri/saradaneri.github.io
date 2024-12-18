@@ -36,16 +36,18 @@ in colloidal systems**, [SIAM J. Math. Anal. 52.3 2531—2560 (2020)](https://dx
 formulation**, [J. Sci. Comput. 82.3 26 (2020)](https://dx.doi.org/10.1007/s10915-020-01170-8), [ArXiv:1709.06765](https://arxiv.org/abs/1709.06765), [bibtex](/bibs/zbmath07197753)
 11. S. Daneri and E. Runa **Exact periodic stripes for minimizers of a local/nonlocal interaction
 functional in general dimension**, [Arch. Ration. Mech. Anal. 231.1 519—589 (2019)](https://dx.doi.org/10.1007/s00205-018-1285-6), [ArXiv:1702.07334](https://arxiv.org/abs/1702.07334), [bibtex](/bibs/zbmath06997181)
-12. S. Daneri and L. Székelyhidi **Non-uniqueness and h-principle for Hölder-continuous weak solutions
+12. S. Bianchini and S. Daneri **On Sudakov's type decomposition of transference plans with norm
+costs**, [ArXiv:1311.1918](https://arxiv.org/abs/1311.1918), [bibtex](/bibs/zbmath07000064)
+13. S. Daneri and L. Székelyhidi **Non-uniqueness and h-principle for Hölder-continuous weak solutions
 of the Euler equations**, [Arch. Ration. Mech. Anal. 224.2 471—514 (2017)](https://dx.doi.org/10.1007/s00205-017-1081-8), [ArXiv:2004.00391](https://arxiv.org/abs/2004.00391), [bibtex](/bibs/zbmath06710292)
-13. S. Daneri and A. Pratelli **A planar bi-Lipschitz extension theorem**, [Adv. Calc. Var. 8.3 221—266 (2015)](https://dx.doi.org/10.1515/acv-2012-0013), [ArXiv:1110.6124](https://arxiv.org/abs/1110.6124), [bibtex](/bibs/zbmath06458692)
-14. S. Daneri and A. Pratelli **Smooth approximation of bi-Lipschitz orientation-preserving
+14. S. Daneri and A. Pratelli **A planar bi-Lipschitz extension theorem**, [Adv. Calc. Var. 8.3 221—266 (2015)](https://dx.doi.org/10.1515/acv-2012-0013), [ArXiv:1110.6124](https://arxiv.org/abs/1110.6124), [bibtex](/bibs/zbmath06458692)
+15. S. Daneri and A. Pratelli **Smooth approximation of bi-Lipschitz orientation-preserving
 homeomorphisms**, [Ann. Inst. Henri Poincaré, Anal. Non Lin{\'e}aire 31.3 567—589 (2014)](https://dx.doi.org/10.1016/j.anihpc.2013.04.007), [ArXiv:1106.1192](https://arxiv.org/abs/1106.1192), [bibtex](/bibs/zbmath06347304)
-15. S. Daneri **Cauchy problem for dissipative H\"older solutions to the
+16. S. Daneri **Cauchy problem for dissipative H\"older solutions to the
 incompressible Euler equations**, [Commun. Math. Phys. 329.2 745—786 (2014)](https://dx.doi.org/10.1007/s00220-014-1973-5), [ArXiv:1302.0988](https://arxiv.org/abs/1302.0988), [bibtex](/bibs/zbmath06312794)
-16. L. Caravenna and S. Daneri **The disintegration of the Lebesgue measure on the faces of a convex
+17. L. Caravenna and S. Daneri **The disintegration of the Lebesgue measure on the faces of a convex
 function**, [J. Funct. Anal. 258.11 3604—3661 (2010)](https://dx.doi.org/10.1016/j.jfa.2010.01.024), [CVGMT](https://cvgmt.sns.it/paper/1434/), [bibtex](/bibs/zbmath05708620)
-17. S. Daneri and G. Savaré **Eulerian calculus for the displacement convexity in the Wasserstein
+18. S. Daneri and G. Savaré **Eulerian calculus for the displacement convexity in the Wasserstein
 distance**, [SIAM J. Math. Anal. 40.3 1104—1122 (2008)](https://dx.doi.org/10.1137/08071346X), [ArXiv:0801.2455](https://arxiv.org/abs/0801.2455), [bibtex](/bibs/zbmath05559214)
 
 
@@ -55,9 +57,7 @@ the 17th international conference, HYP2018, Pennsylvania State
 University, University Park, PA, USA, June 25--29, 2018 164—174 (2020)](https://www.hyp2018.psu.edu/), [bibtex](/bibs/zbmath07315460)
 2. S. Daneri and E. Runa **On the symmetry breaking and structure of the minimizers for a family
 of local/nonlocal interaction functionals**, [Rend. Semin. Mat., Univ. Politec. Torino 77.2 33—48 (2019)](https://www.seminariomatematico.polito.it/rendiconti/77-2/33.pdf), [bibtex](/bibs/zbmath07236785)
-3. S. Bianchini and S. Daneri **On Sudakov's type decomposition of transference plans with norm
-costs**, [Mem. Am. Math. Soc.](https://dx.doi.org/10.1090/memo/1197), [ArXiv:1311.1918](https://arxiv.org/abs/1311.1918), [bibtex](/bibs/zbmath07000064)
-4. S. Daneri and G. Savaré **Lecture notes on gradient flows and optimal transport**, [Optimal transport. Theory and applications. Proceedings of the
+3. S. Daneri and G. Savaré **Lecture notes on gradient flows and optimal transport**, [Optimal transport. Theory and applications. Proceedings of the
 summer school \`Optimal transportation: theory and applications',
 Fourier Institute, Grenoble, France 100—144 (2014)](https://hal.science/hal-00519401/document), [bibtex](/bibs/zbmath06536285)
-5. S. Daneri and A. Figalli **Variational models for the incompressible Euler equations**, [AIMS Ser. Appl. Math. (2013)](https://www.aimsciences.org/article/doi/10.3934/dcdsb.2009.11.1), [CVGMT](http://cvgmt.sns.it/paper/1714/), [bibtex](/bibs/danfig11)
+4. S. Daneri and A. Figalli **Variational models for the incompressible Euler equations**, [AIMS Ser. Appl. Math. (2013)](https://www.aimsciences.org/article/doi/10.3934/dcdsb.2009.11.1), [CVGMT](http://cvgmt.sns.it/paper/1714/), [bibtex](/bibs/danfig11)
