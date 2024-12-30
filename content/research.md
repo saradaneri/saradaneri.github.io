@@ -28,26 +28,27 @@ generalized antiferromagnetic model in general dimension**, [J. Funct. Anal. 283
 equations on unbounded domains**, [J. Differ. Equations 312 474—517 (2022)](https://dx.doi.org/10.1016/j.jde.2021.12.019), [ArXiv:2012.01966](https://arxiv.org/abs/2012.01966), [bibtex](/bibs/zbmath07460677)
 7. S. Daneri and E. Runa **One-dimensionality of the minimizers in the large volume limit for a
 diffuse interface attractive/repulsive model in general dimension**, [Calc. Var. Partial Differ. Equ. 61.1 31 (2022)](https://dx.doi.org/10.1007/s00526-021-02120-4), [ArXiv:2004.06557](https://arxiv.org/abs/2004.06557), [bibtex](/bibs/zbmath07451517)
-8. S. Daneri and E. Runa and L. Székelyhidi **Non-uniqueness for the Euler equations up to Onsager's critical
+8. S. Daneri and E. Runa **Exact periodic stripes for a local/nonlocal minimization problem with volume constraint**, [ArXiv:2106.08135](https://arxiv.org/abs/2106.08135), [bibtex](/bibs/arxiv-2106-08135)
+9. S. Daneri and E. Runa and L. Székelyhidi **Non-uniqueness for the Euler equations up to Onsager's critical
 exponent**, [Ann. PDE 7.1 44 (2021)](https://dx.doi.org/10.1007/s40818-021-00097-z), [ArXiv:2004.00391](https://arxiv.org/abs/2004.00391), [bibtex](/bibs/zbmath07370998)
-9. S. Daneri and E. Runa **Pattern formation for a local/nonlocal interaction functional arising
+10. S. Daneri and E. Runa **Pattern formation for a local/nonlocal interaction functional arising
 in colloidal systems**, [SIAM J. Math. Anal. 52.3 2531—2560 (2020)](https://dx.doi.org/10.1137/19M1276005), [ArXiv:1810.11884](https://arxiv.org/abs/1810.11884), [bibtex](/bibs/zbmath07245265)
-10. E. Facca and S. Daneri and F. Cardin and M. Putti **Numerical solution of Monge-Kantorovich equations via a dynamic
+11. E. Facca and S. Daneri and F. Cardin and M. Putti **Numerical solution of Monge-Kantorovich equations via a dynamic
 formulation**, [J. Sci. Comput. 82.3 26 (2020)](https://dx.doi.org/10.1007/s10915-020-01170-8), [ArXiv:1709.06765](https://arxiv.org/abs/1709.06765), [bibtex](/bibs/zbmath07197753)
-11. S. Daneri and E. Runa **Exact periodic stripes for minimizers of a local/nonlocal interaction
+12. S. Daneri and E. Runa **Exact periodic stripes for minimizers of a local/nonlocal interaction
 functional in general dimension**, [Arch. Ration. Mech. Anal. 231.1 519—589 (2019)](https://dx.doi.org/10.1007/s00205-018-1285-6), [ArXiv:1702.07334](https://arxiv.org/abs/1702.07334), [bibtex](/bibs/zbmath06997181)
-12. S. Bianchini and S. Daneri **On Sudakov's type decomposition of transference plans with norm
+13. S. Bianchini and S. Daneri **On Sudakov's type decomposition of transference plans with norm
 costs**, [ArXiv:1311.1918](https://arxiv.org/abs/1311.1918), [bibtex](/bibs/zbmath07000064)
-13. S. Daneri and L. Székelyhidi **Non-uniqueness and h-principle for Hölder-continuous weak solutions
+14. S. Daneri and L. Székelyhidi **Non-uniqueness and h-principle for Hölder-continuous weak solutions
 of the Euler equations**, [Arch. Ration. Mech. Anal. 224.2 471—514 (2017)](https://dx.doi.org/10.1007/s00205-017-1081-8), [ArXiv:2004.00391](https://arxiv.org/abs/2004.00391), [bibtex](/bibs/zbmath06710292)
-14. S. Daneri and A. Pratelli **A planar bi-Lipschitz extension theorem**, [Adv. Calc. Var. 8.3 221—266 (2015)](https://dx.doi.org/10.1515/acv-2012-0013), [ArXiv:1110.6124](https://arxiv.org/abs/1110.6124), [bibtex](/bibs/zbmath06458692)
-15. S. Daneri and A. Pratelli **Smooth approximation of bi-Lipschitz orientation-preserving
+15. S. Daneri and A. Pratelli **A planar bi-Lipschitz extension theorem**, [Adv. Calc. Var. 8.3 221—266 (2015)](https://dx.doi.org/10.1515/acv-2012-0013), [ArXiv:1110.6124](https://arxiv.org/abs/1110.6124), [bibtex](/bibs/zbmath06458692)
+16. S. Daneri and A. Pratelli **Smooth approximation of bi-Lipschitz orientation-preserving
 homeomorphisms**, [Ann. Inst. Henri Poincaré, Anal. Non Lin{\'e}aire 31.3 567—589 (2014)](https://dx.doi.org/10.1016/j.anihpc.2013.04.007), [ArXiv:1106.1192](https://arxiv.org/abs/1106.1192), [bibtex](/bibs/zbmath06347304)
-16. S. Daneri **Cauchy problem for dissipative H\"older solutions to the
+17. S. Daneri **Cauchy problem for dissipative H\"older solutions to the
 incompressible Euler equations**, [Commun. Math. Phys. 329.2 745—786 (2014)](https://dx.doi.org/10.1007/s00220-014-1973-5), [ArXiv:1302.0988](https://arxiv.org/abs/1302.0988), [bibtex](/bibs/zbmath06312794)
-17. L. Caravenna and S. Daneri **The disintegration of the Lebesgue measure on the faces of a convex
+18. L. Caravenna and S. Daneri **The disintegration of the Lebesgue measure on the faces of a convex
 function**, [J. Funct. Anal. 258.11 3604—3661 (2010)](https://dx.doi.org/10.1016/j.jfa.2010.01.024), [CVGMT](https://cvgmt.sns.it/paper/1434/), [bibtex](/bibs/zbmath05708620)
-18. S. Daneri and G. Savaré **Eulerian calculus for the displacement convexity in the Wasserstein
+19. S. Daneri and G. Savaré **Eulerian calculus for the displacement convexity in the Wasserstein
 distance**, [SIAM J. Math. Anal. 40.3 1104—1122 (2008)](https://dx.doi.org/10.1137/08071346X), [ArXiv:0801.2455](https://arxiv.org/abs/0801.2455), [bibtex](/bibs/zbmath05559214)
 
 
