@@ -13257,3 +13257,11 @@ div.in {
   height: auto;
   object-fit: contain;
 }
+
+.profile-photo {
+  height: 35vh;        /* your size dial — was getting 45vh from the global rule */
+  width: auto;
+  max-width: 45%;      /* never hog more than ~half the row on small screens */
+  float: left;         /* keep the text-wrap layout you have now */
+  padding: 0 2rem 1rem 0;  /* space on the right/bottom where text flows, none wasted on the left edge */
+}
