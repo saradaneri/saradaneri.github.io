@@ -13220,11 +13220,11 @@ table.fc-border-separate {
 
 
 
-img {
-  height: 45vh;
-  float: left;
-  padding: 2rem;
-}
+/* img { */
+/*   height: 45vh; */
+/*   float: left; */
+/*   padding: 2rem; */
+/* } */
 
 div.out {
   /*background-color: blue;*/
@@ -13244,14 +13244,16 @@ div.in {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: -24px; /* Slightly wider gap looks cleaner for logos */
-  background-color: blue;
-  padding: -16px;
+  flex-wrap: wrap;
+  background-color: #7777bb;
+  padding: 10px;
   width: 100%;
+  /* box-sizing: border-box; */
+  /* outline: 3px solid lime;          /* the band itself */ */
 }
 
-.image-bar img {
-  width: 30%; 
-  height: auto;        /* This computes the height automatically based on the width */
-  /* object-fit: contain; /* Prevents any accidental cropping */ */
+.funding-logo {
+  width: 33.33%;
+  height: auto;
+  object-fit: contain;
 }

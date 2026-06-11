@@ -53,25 +53,20 @@
 
 <header class="gssi-background text-white">
 
-
-
 </header>
-
-
-<body>
 
 {% if current_path is containing("grants") %}
 <div class="image-bar">
-  <img src="/ministero.png" alt="Image 1">
-  <img src="/fis.png" alt="Image 2">
-  <img src="/gssi.png" alt="Image 3">
+  <img class="funding-logo" src="/ministero1.png" alt="Logo Ministero">
+  <img class="funding-logo" src="/fis1.png" alt="Logo FIS">
+  <img class="funding-logo" src="/gssi1.png" alt="Logo GSSI">
 </div>
 {% endif %}
+
+<body>
   <main>
-<div id="content">
-{% block content %} {% endblock %}
-</div>
+    <div id="content">
+      {% block content %} {% endblock %}
+    </div>
   </main>
 </body>
-
-</html>
