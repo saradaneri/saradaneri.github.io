@@ -52,10 +52,21 @@
   </nav>
 
 <header class="gssi-background text-white">
+
+
+
 </header>
 
 
 <body>
+
+{% if current_path is containing("grants") %}
+<div class="image-bar">
+  <img src="/ministero.png" alt="Image 1">
+  <img src="/fis.png" alt="Image 2">
+  <img src="/gssi.png" alt="Image 3">
+</div>
+{% endif %}
   <main>
 <div id="content">
 {% block content %} {% endblock %}

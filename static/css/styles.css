@@ -13239,3 +13239,19 @@ div.in {
 .clr {
   clear: both;
 }
+
+.image-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: -24px; /* Slightly wider gap looks cleaner for logos */
+  background-color: blue;
+  padding: -16px;
+  width: 100%;
+}
+
+.image-bar img {
+  width: 30%; 
+  height: auto;        /* This computes the height automatically based on the width */
+  /* object-fit: contain; /* Prevents any accidental cropping */ */
+}
