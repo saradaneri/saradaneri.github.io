@@ -1,15 +1,14 @@
 {% extends "base.html" %}
-
+ 
 {% block title %}
 {{ section.title }}
 {% endblock title %}
-
+ 
 {% block content %}
-<div class="out">
-  <img class="profile-photo" src="/foto_sara2.jpg" alt="Sara">
-  <div class="in">
-{{ section.content|safe }}
+<section class="home-intro">
+  <img class="profile-photo" src="/foto_sara2.jpg" alt="Portrait of Sara">
+  <div class="home-intro-text">
+    {{ section.content | safe }}
   </div>
-<div class="clr"></div>
-</div>
+</section>
 {% endblock content %}

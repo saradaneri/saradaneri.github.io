@@ -1,5 +1,5 @@
 +++
-title = "Homepage of Sara Daneri"
+title = "Research"
 +++
 
 
@@ -43,8 +43,8 @@ costs**, [ArXiv:1311.1918](https://arxiv.org/abs/1311.1918), [bibtex](/bibs/zbma
 of the Euler equations**, [Arch. Ration. Mech. Anal. 224.2 471—514 (2017)](https://dx.doi.org/10.1007/s00205-017-1081-8), [ArXiv:2004.00391](https://arxiv.org/abs/2004.00391), [bibtex](/bibs/zbmath06710292)
 15. S. Daneri and A. Pratelli **A planar bi-Lipschitz extension theorem**, [Adv. Calc. Var. 8.3 221—266 (2015)](https://dx.doi.org/10.1515/acv-2012-0013), [ArXiv:1110.6124](https://arxiv.org/abs/1110.6124), [bibtex](/bibs/zbmath06458692)
 16. S. Daneri and A. Pratelli **Smooth approximation of bi-Lipschitz orientation-preserving
-homeomorphisms**, [Ann. Inst. Henri Poincaré, Anal. Non Lin{\'e}aire 31.3 567—589 (2014)](https://dx.doi.org/10.1016/j.anihpc.2013.04.007), [ArXiv:1106.1192](https://arxiv.org/abs/1106.1192), [bibtex](/bibs/zbmath06347304)
-17. S. Daneri **Cauchy problem for dissipative H\"older solutions to the
+homeomorphisms**, [Ann. Inst. Henri Poincaré, Anal. Non Linéaire 31.3 567—589 (2014)](https://dx.doi.org/10.1016/j.anihpc.2013.04.007), [ArXiv:1106.1192](https://arxiv.org/abs/1106.1192), [bibtex](/bibs/zbmath06347304)
+17. S. Daneri **Cauchy problem for dissipative Hölder solutions to the
 incompressible Euler equations**, [Commun. Math. Phys. 329.2 745—786 (2014)](https://dx.doi.org/10.1007/s00220-014-1973-5), [ArXiv:1302.0988](https://arxiv.org/abs/1302.0988), [bibtex](/bibs/zbmath06312794)
 18. L. Caravenna and S. Daneri **The disintegration of the Lebesgue measure on the faces of a convex
 function**, [J. Funct. Anal. 258.11 3604—3661 (2010)](https://dx.doi.org/10.1016/j.jfa.2010.01.024), [CVGMT](https://cvgmt.sns.it/paper/1434/), [bibtex](/bibs/zbmath05708620)

@@ -13265,3 +13265,149 @@ div.in {
   float: left;         /* keep the text-wrap layout you have now */
   padding: 0 2rem 1rem 0;  /* space on the right/bottom where text flows, none wasted on the left edge */
 }
+
+
+/* =========================================================
+   Homepage — dusk palette drawn from the hero photo
+   Paste at the END of styles.css (after the img/.image-bar rules)
+   ========================================================= */
+
+:root {
+  --ink: #2b2435;        /* deep plum-ink, from the hills in the hero */
+  --ink-soft: #4d4458;
+  --paper: #fbf8f4;      /* warm off-white */
+  --amber: #c8662e;      /* sunset accent — links, details */
+  --amber-soft: #e8b287;
+}
+
+/* Intro: portrait beside text instead of float + clearfix */
+.home-intro {
+  max-width: 1000px;
+  margin: 3.5rem auto 4.5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;          /* stacks naturally on phones */
+}
+
+.home-intro .profile-photo {
+  width: 280px;
+  height: auto;
+  max-width: 100%;
+  float: none;              /* defuse the legacy global img rule */
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(43, 36, 53, 0.20);
+}
+
+.home-intro-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 62ch;          /* comfortable reading measure */
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+/* Headings inside the markdown content */
+.home-intro-text h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 0.35em;
+}
+
+/* small amber rule under the name — the page's one flourish */
+.home-intro-text h1::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  margin-top: 0.45em;
+  background: linear-gradient(90deg, var(--amber), var(--amber-soft));
+  border-radius: 2px;
+}
+
+.home-intro-text h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin: 2em 0 0.5em;
+}
+
+.home-intro-text a {
+  color: var(--amber);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.home-intro-text a:hover {
+  color: var(--ink);
+}
+
+/* Give the page body the warm paper tone (optional — delete if
+   you prefer pure white) */
+body {
+  background-color: var(--paper);
+}
+
+
+
+.hero-tall {
+  min-height: 55vh;            /* the homepage statement piece */
+}
+
+.hero-short {
+  min-height: 180px;           /* a brand ribbon on subpages */
+  background-position: center 30%;  /* keep the sky+ridge in frame when cropped short */
+}
+
+@media (max-width: 600px) {
+  .hero-tall { min-height: 35vh; }  /* don't eat the whole phone screen */
+}
+
+
+
+/* /* ===== Publications list (Research page) ===== */ */
+/**/
+/* #content ol { */
+/*   padding-left: 1.6rem; */
+/* } */
+/**/
+/* #content ol li { */
+/*   margin-bottom: 1.15rem;   /* air between entries — the single biggest win */ */
+/*   line-height: 1.65; */
+/* } */
+/**/
+/* #content ol li::marker { */
+/*   color: #c8662e;            /* numbers in the accent color, quieter than text */ */
+/*   font-weight: 600; */
+/* } */
+/**/
+/* #content ol li strong { */
+/*   color: #2b2435;            /* titles slightly darker than surrounding text */ */
+/* } */
+/**/
+/* /* ArXiv / journal / bibtex links become small pills */ */
+/* #content ol li a { */
+/*   display: inline-block; */
+/*   padding: 0.05rem 0.6rem; */
+/*   margin: 0.2rem 0.2rem 0 0; */
+/*   border: 1px solid rgba(200, 102, 46, 0.35); */
+/*   border-radius: 999px; */
+/*   font-size: 0.85em; */
+/*   color: #c8662e; */
+/*   background: rgba(200, 102, 46, 0.06); */
+/*   text-decoration: none; */
+/*   white-space: nowrap; */
+/* } */
+/**/
+/* #content ol li a:hover { */
+/*   background: #c8662e; */
+/*   color: #fff; */
+/* } */

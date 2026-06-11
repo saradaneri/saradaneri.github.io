@@ -1,5 +1,5 @@
 +++
-title = "Homepage of Sara Daneri"
+title = "Teaching"
 +++
 
 * PhD Course **An Introduction to Geometric Measure Theory and its Applications** GSSI Nov-Dic 2023.
